@@ -19,6 +19,28 @@ cd C:\dev\cdn-store
 .\download-svar-filemanager-icons.ps1
 ```
 
+## Publish a new asset to GitHub / jsDelivr
+
+From the **`cdn-store`** clone (canonical path `C:\dev\cdn-store`):
+
+```powershell
+cd C:\dev\cdn-store
+.\publish-cdn-store-asset.ps1 `
+  -Source C:\path\to\your-icon.svg `
+  -Dest svg/small\your-icon.svg `
+  -Message "Add your-icon for Files Manager" `
+  -Commit -Push
+```
+
+- **`-Source`** — file or folder to copy into the repo  
+- **`-Dest`** — path under repo root (forward slashes OK), e.g. `svg/small/foo.svg`  
+- **`-Commit`** / **`-Push`** — optional; omit to only copy locally, then commit yourself  
+- **`-DryRun`** — print planned copy/git steps without writing  
+
+Public URL after push: `https://cdn.jsdelivr.net/gh/icebot411/cdn-store@main/{Dest}`
+
+Remote: `git@github.com:icebot411/cdn-store.git` (HTTPS `origin` also works for push if credentials are configured).
+
 ## jsDelivr (GitHub-hosted)
 
 If this repo is published as **`icebot411/cdn-store`** on GitHub, the React Files Manager uses:

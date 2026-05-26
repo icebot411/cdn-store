@@ -1,0 +1,1 @@
+https://cdn.jsdelivr.net/gh/icebot411/cdn-store@main/path/to/file
