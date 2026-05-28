@@ -1,3 +1,4 @@
 download-svar-filemanager-icons.ps1
 publish-cdn-store-asset.ps1
 ./temp/*
+svg/big/desktop.ini
